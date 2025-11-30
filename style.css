@@ -13,14 +13,14 @@ body {
 }
 
 .navbar {
-    background: #800080;
+    background: #7a1eb6;
     color: white;
     padding: 15px;
     text-align: center;
 }
 
 .footer {
-    background-color: #800080;
+    background-color: #7a1eb6;
     color: white;
     text-align: center;
     padding: 10px;
@@ -40,7 +40,7 @@ body {
 }
 
 h1, h2 {
-    color: #800080;
+    color: #7a1eb6;
 }
 
 label {
@@ -61,26 +61,21 @@ button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background: #800080;
-    color: white;
+    background: #114acf;
+    color: #ffffff;
     border: none;
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
 }
-
-button:hover {
-    background: #5e0073;
-}
-
 /* Login */
 .login-container {
     background: white;
     max-width: 400px;
     margin: 80px auto;
-    padding: 25px;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 0 15px #0003;
+    box-shadow: 0 0 15px ;
 }
 
 .texto-menor {
@@ -103,7 +98,7 @@ th, td {
 }
 
 th {
-    background: #800080;
+    background: #7a1eb6;
     color: white;
 }
 

@@ -36,7 +36,13 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
     let senha = document.getElementById("senha").value;
 
     if (usuario.trim() !== "" && senha.trim() !== "") {
-        window.location.href = "index.html"; // Redireciona para o sistema
+
+        // SALVA LOGIN ATIVO
+        localStorage.setItem("logado", "true");
+
+        // Vai para o sistema
+        window.location.href = "index.html";
+
     } else {
         alert("Preencha usuário e senha corretamente.");
     }

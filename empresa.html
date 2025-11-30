@@ -7,7 +7,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Minha Empresa</title>
+    <title>Sobre Empresa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
         /* ===== CABEÇALHO / MENU ===== */
         header {
-            background: #800080;
+            background: #7a1eb6;
             color: white;
             padding: 15px 0;
             text-align: center;
@@ -60,7 +60,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         }
 
         h2 {
-            color: #800080;
+            color: #7a1eb6;
             margin-top: 0;
         }
 
@@ -70,30 +70,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
         /* ===== RODAPÉ ===== */
         footer {
-            background: #800080;
+            background: #7a1eb6;
             color: white;
             text-align: center;
             padding: 15px;
             margin-top: 40px;
         }
-    </style>
-</head>
+    </style> 
+<script>
+  if (!localStorage.getItem("logado")) {
+      window.location.href = "login.html";
+  }
+</script>
 
 <body>
 
-<!-- MENU SUPERIOR -->
 <header>
-    <div class="titulo">Sistema de Controle de Férias</div>
-
+    <div class="titulo">Sobre a Empresa</div>
     <nav>
-        <a href="login.html">Login</a>
-        <a href="empresa.html">Minha Empresa</a>
+        <a href="index.html">Início</a>
+        <a href="empresa.html">Sobre Empresa</a>
         <a href="sobre.html">Sobre</a>
-        <a href="index.html">Cadastrar Férias</a>
+        <a href="#" onclick="localStorage.removeItem('logado'); window.location.href='login.html';">Sair</a>
     </nav>
 </header>
 
+</body>
+</html>
 
+<body>
 <!-- CONTEÚDO PRINCIPAL -->
 <div class="container">
 

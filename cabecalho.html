@@ -3,9 +3,17 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
 -->
- <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #800080">
+ <!DOCTYPE html>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7a1eb6">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html">Sistema de Férias</a>
+
+    <a class="navbar-brand fw-bold" href="#" onclick="
+      if(localStorage.getItem('logado')) {
+          window.location.href = 'index.html';
+      } else {
+          window.location.href = 'login.html';
+      }
+    ">Sistema de Férias</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -13,10 +21,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastrar Férias</a></li>
-        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="empresa.html">Minha Empresa</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+
+        <!-- Botão de sair -->
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="#" onclick="
+            localStorage.removeItem('logado');
+            window.location.href='login.html';
+          ">Sair</a>
+        </li>
+
       </ul>
     </div>
   </div>
