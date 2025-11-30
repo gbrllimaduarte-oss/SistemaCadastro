@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Sistema de Férias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Sistema de Controle de Férias</h2>
+
+    <form id="formLogin">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" required placeholder="Digite seu usuário">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required placeholder="Digite sua senha">
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <p class="texto-menor">© 2025 - Todos os direitos reservados</p>
+</div>
+
+<script>
+document.getElementById("formLogin").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    if (usuario.trim() !== "" && senha.trim() !== "") {
+        window.location.href = "index.html"; // Redireciona para o sistema
+    } else {
+        alert("Preencha usuário e senha corretamente.");
+    }
+});
+</script>
+
+</body>
+</html>
